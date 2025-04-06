@@ -7,7 +7,7 @@ import {
 } from "@apollo/client/core";
 import { setContext } from "@apollo/client/link/context";
 
-const uri = "https://one01296759-comp3133-assignment2.onrender.com/graphql";
+const uri = "http://localhost:4000/graphql";
 
 export function createApollo(): ApolloClientOptions<any> {
   const http = new HttpLink({ uri });
