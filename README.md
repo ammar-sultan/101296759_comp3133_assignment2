@@ -42,9 +42,14 @@ This project is an Employee Management System developed using Angular and GraphQ
 - Angular Material for responsive UI
 - HTML local storage for session management
 
-### Deployment
+## Deployment
 
-The application is deployed on a cloud hosting platform (Heroku/Vercel/Cyclic). The deployed URL is provided for verification.
+The application is deployed on cloud hosting platforms for both the frontend and backend.
+
+- **Frontend:** [Netlify Deployment](https://101296759-assignment2.netlify.app/)
+- **Backend (GraphQL Server):** [Render Deployment](https://one01296759-comp3133-assignment2.onrender.com/graphql)
+
+These URLs can be used to access and test the application in a production environment.
 
 ### How to Run
 
