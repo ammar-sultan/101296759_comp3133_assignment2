@@ -1,0 +1,122 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+stacktrace.txt
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Angular specific
+dist/
+out-tsc/
+.angular/
+.idea/
+.vscode/
+.sass-cache/
+*.swp
+*.bak
+*.tmp
+*.tmp.*
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Temporary files
+coverage/
+temp/
+.tmp/
+*.temp
+
+# Compiled Typescript
+*.js
+*.js.map
+*.d.ts
+
+# Angular Material specific
+*.metadata.json
+
+# Build output
+build/
+cache/
+coverage/
+tmp/
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.c9/
+
+# Local storage
+localStorage/
+*.localstorage
+*.ldb
+
+# GraphQL related
+schema.graphql
+.graphqlconfig
+*.graphql
+*.gql
+
+# Dependency directories
+jspm_packages/
+
+# Cache files
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Miscellaneous
+*.gz
+*.zip
+*.bak
+*.backup
+*.orig
+*.rej
+*.sock
+*.pid
+*.seed
+*.pid.lock
+
+# Generated files
+*.log
+*.pyc
+*.pyo
+*.pyd
+*.sublime-project
+*.sublime-workspace
+*.sublime-metadata
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
