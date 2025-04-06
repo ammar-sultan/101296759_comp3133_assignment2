@@ -1,0 +1,183 @@
+<app-navbar></app-navbar>
+<div class="form-container">
+  <div class="form-content">
+    <h3 class="form-title">Add New Employee</h3>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-input" formControlName="first_name" />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('first_name')?.touched &&
+              employeeForm.get('first_name')?.invalid
+            "
+          >
+            First name is required.
+          </span>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-input" formControlName="last_name" />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('last_name')?.touched &&
+              employeeForm.get('last_name')?.invalid
+            "
+          >
+            Last name is required.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-input" formControlName="email" />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('email')?.touched &&
+              employeeForm.get('email')?.hasError('required')
+            "
+          >
+            Email is required.
+          </span>
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('email')?.touched &&
+              employeeForm.get('email')?.hasError('email')
+            "
+          >
+            Enter a valid email address.
+          </span>
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <select class="form-input" formControlName="gender">
+            <option value="">Select...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('gender')?.touched &&
+              employeeForm.get('gender')?.invalid
+            "
+          >
+            Gender is required.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Designation</label>
+          <input type="text" class="form-input" formControlName="designation" />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('designation')?.touched &&
+              employeeForm.get('designation')?.invalid
+            "
+          >
+            Designation is required.
+          </span>
+        </div>
+        <div class="form-group">
+          <label>Department</label>
+          <input type="text" class="form-input" formControlName="department" />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('department')?.touched &&
+              employeeForm.get('department')?.invalid
+            "
+          >
+            Department is required.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Salary</label>
+          <input type="number" class="form-input" formControlName="salary" />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('salary')?.touched &&
+              employeeForm.get('salary')?.hasError('required')
+            "
+          >
+            Salary is required.
+          </span>
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('salary')?.touched &&
+              employeeForm.get('salary')?.hasError('min')
+            "
+          >
+            Minimum salary is 1000.
+          </span>
+        </div>
+        <div class="form-group">
+          <label>Date of Joining</label>
+          <input
+            type="date"
+            class="form-input"
+            formControlName="date_of_joining"
+          />
+          <span
+            class="error-message"
+            *ngIf="
+              employeeForm.get('date_of_joining')?.touched &&
+              employeeForm.get('date_of_joining')?.invalid
+            "
+          >
+            Date of joining is required.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Photo URL (optional)</label>
+        <input
+          type="text"
+          class="form-input"
+          formControlName="employee_photo"
+          (input)="updatePreview()"
+          placeholder="https://example.com/photo.jpg"
+        />
+      </div>
+
+      <div class="form-group" *ngIf="photoPreview">
+        <label>Preview:</label>
+        <img [src]="photoPreview" alt="Profile Preview" class="img-thumbnail" />
+      </div>
+
+      <div class="form-row button-group">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="employeeForm.invalid"
+        >
+          Save
+        </button>
+        <button
+          class="btn btn-secondary"
+          type="button"
+          (click)="router.navigate(['/employees'])"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

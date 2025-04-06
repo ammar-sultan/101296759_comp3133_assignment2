@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h2 class="dashboard-title">Employee Dashboard</h2>
+    <div class="controls-group">
+      <button class="btn btn-add" (click)="navigateTo('/employees/add')">
+        ＋ Add Employee
+      </button>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search employees..."
+        [(ngModel)]="searchQuery"
+        (input)="handleSearch()"
+      />
+    </div>
+  </div>
+
+  <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <div class="table-container">
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Designation</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of filteredEmployees">
+          <td>{{ emp.first_name }} {{ emp.last_name }}</td>
+          <td class="email-cell">{{ emp.email }}</td>
+          <td>{{ emp.designation }}</td>
+          <td class="action-cell">
+            <button
+              class="btn btn-view"
+              (click)="navigateTo('/employees/detail/' + emp.id)"
+            >
+              Details
+            </button>
+            <button
+              class="btn btn-edit"
+              (click)="navigateTo('/employees/edit/' + emp.id)"
+            >
+              Edit
+            </button>
+            <button class="btn btn-delete" (click)="handleDelete(emp.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="filteredEmployees.length === 0">
+          <td colspan="4" class="empty-state">No employees found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

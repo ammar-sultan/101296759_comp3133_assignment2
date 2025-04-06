@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="detail-container">
+  <div class="detail-card">
+    <div class="detail-header">
+      <h3 class="detail-title">Employee Details</h3>
+      <button class="btn btn-back" (click)="goBack()">← Go Back</button>
+    </div>
+
+    <div class="detail-content">
+      <div *ngIf="error" class="error-message">{{ error }}</div>
+      <div *ngIf="loading" class="loading-state">
+        Loading employee details...
+      </div>
+
+      <div *ngIf="employee" class="detail-grid">
+        <div class="employee-profile" *ngIf="employee.employee_photo">
+          <div class="photo-container">
+            <img
+              [src]="employee.employee_photo"
+              class="profile-image"
+              alt="Employee Photo"
+            />
+          </div>
+        </div>
+
+        <div class="detail-info">
+          <div class="detail-item">
+            <span class="detail-label">First Name:</span>
+            {{ employee.first_name }}
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Last Name:</span>
+            {{ employee.last_name }}
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Email:</span>
+            {{ employee.email }}
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Designation:</span>
+            {{ employee.designation }}
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Salary:</span>
+            ${{ employee.salary | number }}
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Date of Joining:</span>
+            {{ formatDate(employee.date_of_joining) }}
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Department:</span>
+            {{ employee.department }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

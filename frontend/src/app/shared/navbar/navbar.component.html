@@ -1,0 +1,6 @@
+<nav class="navbar">
+  <a href="/employees" class="navbar-brand">TaskFlow</a>
+  <div class="navbar-actions" *ngIf="isLoggedIn()">
+    <button class="btn btn-secondary" (click)="logout()">Logout</button>
+  </div>
+</nav>
