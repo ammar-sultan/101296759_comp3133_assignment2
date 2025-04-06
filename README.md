@@ -4,17 +4,6 @@
 
 This project is an Employee Management System developed using Angular and GraphQL. It provides functionality for managing employee data through a user-friendly interface.
 
-### Features
-
-- **Login & Signup:** Custom-designed authentication screens to securely log in or register users.
-- **Session Management:** Maintains session using HTML local storage.
-- **Employee List:** Displays a list of all employees with relevant details.
-- **Add Employee:** Allows users to add a new employee using a simple form and API integration.
-- **View Employee:** Shows detailed information of a selected employee.
-- **Update Employee:** Enables users to update existing employee information.
-- **Delete Employee:** Allows the removal of an employee from the system.
-- **Logout:** Redirects to the login page, clearing the session.
-
 ### Screenshots
 
 1. Login Screen  
@@ -34,6 +23,17 @@ This project is an Employee Management System developed using Angular and GraphQ
 
 6. Edit Employee Details  
    ![ Edit Details](./screenshots/edit-employee.png)
+
+### Features
+
+- **Login & Signup:** Custom-designed authentication screens to securely log in or register users.
+- **Session Management:** Maintains session using HTML local storage.
+- **Employee List:** Displays a list of all employees with relevant details.
+- **Add Employee:** Allows users to add a new employee using a simple form and API integration.
+- **View Employee:** Shows detailed information of a selected employee.
+- **Update Employee:** Enables users to update existing employee information.
+- **Delete Employee:** Allows the removal of an employee from the system.
+- **Logout:** Redirects to the login page, clearing the session.
 
 ### Technologies Used
 
