@@ -13,7 +13,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "https://101296759-comp3133-assignment2.vercel.app",
+      "http://localhost:4200",
+    ],
     credentials: true,
   })
 );
