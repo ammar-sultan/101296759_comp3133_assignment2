@@ -11,12 +11,18 @@ connectDB();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*",
+//     credentials: true,
+//   })
+// );
+
+const corsOptions = {
+  origin: "https://101296759-assignment2.netlify.app/",
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
