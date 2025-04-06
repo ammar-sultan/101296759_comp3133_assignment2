@@ -24,6 +24,9 @@ This project is an Employee Management System developed using Angular and GraphQ
 6. Edit Employee Details  
    ![ Edit Details](./screenshots/edit-employee.png)
 
+7. Delete Employee Confirmation  
+   ![ Delete Confirmation](./screenshots/delete-confirm.png)
+
 ### Features
 
 - **Login & Signup:** Custom-designed authentication screens to securely log in or register users.
