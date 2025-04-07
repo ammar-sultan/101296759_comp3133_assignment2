@@ -11,8 +11,8 @@ The application is deployed on cloud hosting platforms for both the frontend and
 - **Frontend:** [Netlify Deployment](https://101296759-assignment2.netlify.app/)
 - **Backend (GraphQL Server):** [Render Deployment](https://one01296759-comp3133-assignment2.onrender.com/graphql)
 
-- Email Address: test@test.com
-- Password: test@test.com
+Email Address: test@test.com
+Password: test@test.com
 
 ### Screenshots
 
