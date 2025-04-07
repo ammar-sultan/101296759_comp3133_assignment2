@@ -4,6 +4,16 @@
 
 This project is an Employee Management System developed using Angular and GraphQL. It provides functionality for managing employee data through a user-friendly interface.
 
+## Deployment
+
+The application is deployed on cloud hosting platforms for both the frontend and backend.
+
+- **Frontend:** [Netlify Deployment](https://101296759-assignment2.netlify.app/)
+- **Backend (GraphQL Server):** [Render Deployment](https://one01296759-comp3133-assignment2.onrender.com/graphql)
+
+- Email Address: test@test.com
+- Password: test@test.com
+
 ### Screenshots
 
 1. Login Screen  
@@ -44,15 +54,6 @@ This project is an Employee Management System developed using Angular and GraphQ
 - GraphQL for data fetching and manipulation
 - Angular Material for responsive UI
 - HTML local storage for session management
-
-## Deployment
-
-The application is deployed on cloud hosting platforms for both the frontend and backend.
-
-- **Frontend:** [Netlify Deployment](https://101296759-assignment2.netlify.app/)
-- **Backend (GraphQL Server):** [Render Deployment](https://one01296759-comp3133-assignment2.onrender.com/graphql)
-
-These URLs can be used to access and test the application in a production environment.
 
 ### How to Run
 
